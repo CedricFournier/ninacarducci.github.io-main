@@ -171,7 +171,9 @@ function clickmodal (galleryjson) {
 }
 
 const modal = document.querySelector(".fade");
+const modalback = document.querySelector(".modal-backdrop");
 function openmodal (idimg, galleryjson) {
+    modalback.style.display = "block";
     imgview(idimg, galleryjson);
     modal.classList.add("show");
     modal.style.display = "block";
@@ -184,6 +186,7 @@ modal.addEventListener("click", () => {
     modal.style.display = "none";
     modal.ariaHidden = "true";
     modal.ariaModal = "false";
+    modalback.style.display = "none";
 });
 const divmodal = document.querySelector(".modal-dialog");
 divmodal.addEventListener("click", (event) => {
