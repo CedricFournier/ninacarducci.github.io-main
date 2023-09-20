@@ -168,11 +168,14 @@ function clickmodal (galleryjson) {
             openmodal(idimg, galleryjson);
         });
     });
-}
+};
 
 const modal = document.querySelector(".fade");
 const modalback = document.querySelector(".modal-backdrop");
+const body = document.querySelector("body");
 function openmodal (idimg, galleryjson) {
+    body.classList.add("modal-open");
+    body.style.overflow = "hidden";
     modalback.style.display = "block";
     imgview(idimg, galleryjson);
     modal.classList.add("show");
@@ -182,12 +185,15 @@ function openmodal (idimg, galleryjson) {
 };
 
 modal.addEventListener("click", () => {
+    body.classList.remove("modal-open");
+    body.style.removeProperty("overflow");
     modal.classList.remove("show");
     modal.style.display = "none";
     modal.ariaHidden = "true";
     modal.ariaModal = "false";
     modalback.style.display = "none";
 });
+
 const divmodal = document.querySelector(".modal-dialog");
 divmodal.addEventListener("click", (event) => {
     event.stopPropagation();
