@@ -40,6 +40,7 @@ body {
 
 .social-link img {
 	width: 20px;
+    height: 20px;
 }
 
 #about {
@@ -69,6 +70,7 @@ body {
 
 .picture img {
 	width: 100%;
+    height: 100%;
 
 }
 #about-me {
@@ -90,9 +92,7 @@ body {
 	font-size: 14px;
 }
 
-#gallery {
-	/*	min-height: 100vh; */
-}
+
 .title{
 	text-align: center;
 	padding-block: 2em;
@@ -101,7 +101,7 @@ body {
 	justify-content: center;
 }
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-	color: #fff;
+	color: black;
 	background-color: #BEB45A;
 	border-radius:0 ;
 }
@@ -267,6 +267,7 @@ input[type="submit"] {
 	}
 	.picture {
 		width: 50%;
+        height: 50%;
 	}
 	.picture.left::before {
 		width: 100%;
@@ -351,6 +352,7 @@ input[type="submit"] {
 	}
 	.picture {
 		width: 80%;
+        height: 80%;
 	}
 }
 
